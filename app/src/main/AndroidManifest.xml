@@ -54,8 +54,9 @@
         <activity
             android:name=".Register2"
             android:label="Daftar Akun"
-            android:theme="@style/coba"
-            android:parentActivityName=".Register" />
+            android:parentActivityName=".Register"
+            android:theme="@style/coba" />
+        <activity android:name=".PointMcafee"></activity>
     </application>
 
 </manifest>

@@ -3,6 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.omdutz.mcafee">
 
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,6 +23,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".zxking.ZxkingCameraCostum"
+            android:stateNotNeeded="true"
+            android:theme="@style/zxing_CaptureTheme"
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".Login"
             android:label="Login"
@@ -43,20 +52,11 @@
             android:name="android.support.PARENT_ACTIVITY"
             android:value=".Login" />
 
-        <activity android:name=".PointReward" />
-        <activity android:name=".ScanCode" />
-        <activity android:name=".Produk" />
-        <activity android:name=".Lokasi" />
-        <activity android:name=".Notif" />
-        <activity android:name=".FAQ" />
-        <activity android:name=".CustomerService" />
-        <activity android:name=".Riwayat" />
         <activity
             android:name=".Register2"
             android:label="Daftar Akun"
             android:parentActivityName=".Register"
             android:theme="@style/coba" />
-        <activity android:name=".PointMcafee"></activity>
     </application>
 
 </manifest>

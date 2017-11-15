@@ -1,9 +1,14 @@
 package com.example.omdutz.mcafee;
 
+import android.Manifest;
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -11,6 +16,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
+
+import com.example.omdutz.mcafee.zxking.ZxkingCameraCostum;
+import com.google.zxing.integration.android.IntentIntegrator;
+import com.google.zxing.integration.android.IntentResult;
 
 public class Draw extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -76,8 +86,9 @@ public class Draw extends AppCompatActivity
             getSupportActionBar().setTitle("Point Reward");
             fragmentTransaction.replace(R.id.ini_Fragment,new PointReward()).addToBackStack(null);
         } else if (id == R.id.scan) {
-            getSupportActionBar().setTitle("Scan Code");
-            fragmentTransaction.replace(R.id.ini_Fragment, new ScanCode()).addToBackStack(null);
+            scanCode();
+            // getSupportActionBar().setTitle("Scan Code");
+           // fragmentTransaction.replace(R.id.ini_Fragment, new ScanCode()).addToBackStack(null);
         } else if (id == R.id.produk) {
             getSupportActionBar().setTitle("Produk");
             fragmentTransaction.replace(R.id.ini_Fragment, new  Produk()).addToBackStack(null);
@@ -103,5 +114,38 @@ public class Draw extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+    //fungsi buat scan qr code
+    public void scanCode(){
+        if(ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
+                != PackageManager.PERMISSION_GRANTED){
+            // Should we show an explanation?
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+                    Manifest.permission.CAMERA)) {
+                ActivityCompat.requestPermissions(this,
+                        new String[]{Manifest.permission.CAMERA},
+                        1);
+            } else {
+                ActivityCompat.requestPermissions(this,
+                        new String[]{Manifest.permission.CAMERA},
+                        1);
+            }
+        }else{
+            IntentIntegrator intentIntegrator = new IntentIntegrator(this);
+            intentIntegrator.setOrientationLocked(true);
+            intentIntegrator.setCameraId(0);
+            intentIntegrator.setCaptureActivity(ZxkingCameraCostum.class);
+            intentIntegrator.setPrompt("pindai kode batang pada produk");
+            intentIntegrator.initiateScan();
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        IntentResult intentResult = IntentIntegrator.parseActivityResult(requestCode,resultCode,data);
+        if(intentResult != null){
+            Toast.makeText(this, intentResult.getContents(), Toast.LENGTH_SHORT).show();
+        }
     }
 }

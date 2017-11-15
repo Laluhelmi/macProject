@@ -7,11 +7,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class CustomerService extends Fragment {
+public class PointReward extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.activity_scan_code,container,false);
+        return inflater.inflate(R.layout.activity_point_reward,container,false);
     }
 }
+

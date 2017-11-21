@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -44,3 +45,51 @@
     </item>
 
 </menu>
+=======
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/reward"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="McAfee Reward" />
+        <item
+            android:id="@+id/scan"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Scan code" />
+        <item
+            android:id="@+id/produk"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Produk" />
+        <item
+            android:id="@+id/lokasi"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Lokasi Reseller" />
+        <item
+            android:id="@+id/notif"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Notifikasi"/>
+        <item
+            android:id="@+id/histori"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Riwayat"/>
+    </group>
+
+    <item android:title="Help.">
+        <menu>
+            <item
+                android:id="@+id/FAQ"
+                android:icon="@drawable/ic_menu_share"
+                android:title="FAQ" />
+            <item
+                android:id="@+id/service"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Customer Service" />
+        </menu>
+    </item>
+
+</menu>
+>>>>>>> e5762bda42aa311e6fc9d1dfbc9464c189f50a0c

@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://D:\KULIAH\macProject-master\macProject-master\MCAFEE.iml" filepath="D:\KULIAH\macProject-master\macProject-master\MCAFEE.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://D:\KULIAH\macProject-master\macProject-master\app\app.iml" filepath="D:\KULIAH\macProject-master\macProject-master\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/macProject-master.iml" filepath="$PROJECT_DIR$/macProject-master.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/MCAFEE.iml" filepath="$PROJECT_DIR$/MCAFEE.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+>>>>>>> e5762bda42aa311e6fc9d1dfbc9464c189f50a0c
     </modules>
   </component>
 </project>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -10,3 +11,17 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content" />
 </android.support.constraint.ConstraintLayout>
+=======
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.omdutz.mcafee.PointReward">
+<TextView
+    android:text="point"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+</android.support.constraint.ConstraintLayout>
+>>>>>>> e5762bda42aa311e6fc9d1dfbc9464c189f50a0c

@@ -16,11 +16,19 @@
             android:layout_height="wrap_content"
             android:foregroundGravity="center"
             android:src="@drawable/mcafee10"
+<<<<<<< HEAD
             android:layout_marginLeft="70dp"
             android:layout_marginRight="70dp"   />
         <TextView
             android:gravity="center"
             android:text="Terima Kasih Telah melakukan registrasi,\nAkun Anda berhasil dibuat. silahkan masuk ke email anda untuk verifikasi email "
+=======
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"   />
+        <TextView
+            android:gravity="center"
+            android:text="Terima Kasih Telah Mendaftar,\nAkun Anda telah dibuat. silahkan masuk ke email anda untuk verifikasi email "
+>>>>>>> e5762bda42aa311e6fc9d1dfbc9464c189f50a0c
             android:layout_below="@+id/gambarregister2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />

@@ -17,7 +17,11 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.omdutz.mcafee.ClientPackage.Http;
+<<<<<<< HEAD
 import com.example.omdutz.mcafee.Pojo.RegisterPojo;
+=======
+import com.example.omdutz.mcafee.Interface.LoginRespon;
+>>>>>>> e5762bda42aa311e6fc9d1dfbc9464c189f50a0c
 import com.example.omdutz.mcafee.Register;
 import com.example.omdutz.mcafee.Register2;
 import com.example.omdutz.mcafee.RegisterSukses;
@@ -98,12 +102,32 @@ public class RegisterAndLoginVolley {
         this.requestQueue.add(stringRequest);
     }
 
+<<<<<<< HEAD
     public void cekLogin(final String email, final String password){
          StringRequest stringRequest = new StringRequest(Request.Method.POST, Http.url + "",
             new Response.Listener<String>() {
                 @Override
                 public void onResponse(String response) {
 
+=======
+    public void cekLogin(final String email, final String password, final LoginRespon respon){
+         StringRequest stringRequest = new StringRequest(Request.Method.POST, Http.url + "login",
+            new Response.Listener<String>() {
+                @Override
+                public void onResponse(String response) {
+                    try{
+                        JSONObject object = new JSONObject(response);
+                        if(object.getString("status").equals("succes ")){
+                            respon.sukses();
+                        }else{
+                            String pesan = object.getString("message");
+                            respon.gagal(pesan);
+                        }
+
+                    }catch (Exception e){
+                        Log.d("Error",e.getMessage());
+                    }
+>>>>>>> e5762bda42aa311e6fc9d1dfbc9464c189f50a0c
                 }
             },onVolleyError()){
             @Override
@@ -128,6 +152,11 @@ public class RegisterAndLoginVolley {
             public void onErrorResponse(VolleyError error) {
                 if(error instanceof TimeoutError){
                     Toast.makeText(context, "Periksa Jaringan Internet Anda", Toast.LENGTH_SHORT).show();
+<<<<<<< HEAD
+=======
+                }else{
+                    Toast.makeText(context, error.getMessage(), Toast.LENGTH_SHORT).show();
+>>>>>>> e5762bda42aa311e6fc9d1dfbc9464c189f50a0c
                 }
             }
         };

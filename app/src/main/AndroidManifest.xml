@@ -3,9 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.omdutz.mcafee">
 
-    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -57,6 +60,9 @@
             android:label="Daftar Akun"
             android:parentActivityName=".Register"
             android:theme="@style/coba" />
+        <activity android:name=".RegisterSukses"
+            android:theme="@style/coba"
+             android:label="Registrasi Sukses"></activity>
     </application>
 
 </manifest>

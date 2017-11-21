@@ -94,21 +94,22 @@ public class Draw extends AppCompatActivity
             fragmentTransaction.replace(R.id.ini_Fragment, new  Produk()).addToBackStack(null);
         } else if (id == R.id.lokasi) {
             getSupportActionBar().setTitle("Lokasi");
-            fragmentTransaction.replace(R.id.ini_Fragment, new  Lokasi()).addToBackStack(null);
+            fragmentTransaction.replace(R.id.ini_Fragment, new  Lokasi());
         } else if (id == R.id.notif) {
             getSupportActionBar().setTitle("Notifikasi");
-            fragmentTransaction.replace(R.id.ini_Fragment, new  Notif()).addToBackStack(null);
+//            fragmentTransaction.replace(R.id.ini_Fragment, new  Notif());
+            getSupportFragmentManager().popBackStack(0,FragmentManager.POP_BACK_STACK_INCLUSIVE);
         }else if (id == R.id.FAQ) {
             getSupportActionBar().setTitle("FAQ");
-            fragmentTransaction.replace(R.id.ini_Fragment, new  FAQ()).addToBackStack(null);
+            fragmentTransaction.replace(R.id.ini_Fragment, new  FAQ());
         }
         else if (id == R.id.service){
             getSupportActionBar().setTitle("Customer Service");
-            fragmentTransaction.replace(R.id.ini_Fragment, new CustomerService()).addToBackStack(null);
+            fragmentTransaction.replace(R.id.ini_Fragment, new CustomerService()).addToBackStack("service");
         }
         else if (id == R.id.histori){
             getSupportActionBar().setTitle("Riwayat");
-            fragmentTransaction.replace(R.id.ini_Fragment, new Riwayat()).addToBackStack(null);
+            fragmentTransaction.replace(R.id.ini_Fragment, new Riwayat());
         }
         fragmentTransaction.commit();
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

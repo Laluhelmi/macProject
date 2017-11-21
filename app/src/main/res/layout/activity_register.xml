@@ -12,6 +12,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+        android:id="@+id/rRegister"
     tools:context="com.example.omdutz.mcafee.Register"
     android:orientation="vertical">
 
@@ -93,22 +94,15 @@
             android:maxLines="1"/>
     </android.support.design.widget.TextInputLayout>
 
-    <android.support.design.widget.TextInputLayout
+    <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/layout7"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:layout_below="@+id/layout5">
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Nama Toko"
-            android:id="@+id/toko"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:maxLength="13"
-            android:maxLines="1" />
-    </android.support.design.widget.TextInputLayout>
+    </Spinner
+      >
 
     <Button
         android:id="@+id/tombolnext"
@@ -116,7 +110,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/layout7"
         android:layout_marginTop="10dp"
-        android:background="@drawable/shapes"
+        android:background="@drawable/enable_color"
         android:text="Next"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
@@ -132,6 +126,7 @@
         android:layout_marginRight="15dp"
         android:layout_marginLeft="15dp"
         android:text="Back"
+
         android:textColor="@android:color/white"/>
 </RelativeLayout>
 

@@ -7,6 +7,29 @@
     android:layout_height="match_parent"
     tools:context="com.example.omdutz.mcafee.Login">
 
+    <RelativeLayout
+        android:visibility="invisible"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent">
+     <ProgressBar
+         android:id="@+id/loadingbar"
+         android:layout_centerVertical="true"
+         android:layout_centerHorizontal="true"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content" />
+      <TextView
+          android:layout_below="@+id/loadingbar"
+          android:id="@+id/loading"
+          android:gravity="center"
+          android:layout_marginTop="10dp"
+          android:layout_centerHorizontal="true"
+          android:text="Mengecek ......"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
     <ImageView
         android:id="@+id/logologin"
         android:layout_width="match_parent"
@@ -74,6 +97,8 @@
         android:layout_marginTop="15dp"
         android:textColor="@android:color/white"
         android:background="@drawable/shapes"/>
+</RelativeLayout>
+
 
 
 </RelativeLayout>
